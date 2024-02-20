@@ -7,12 +7,19 @@ then
 else
   echo "Xcode is not installed."
   xcode-select --install
-fi
 
-# wait for xcode installation to complete.
-while ! xcode-select -p > /dev/null; do
-  sleep 5
-done
+  # wait for xcode installation to complete.
+  while ! xcode-select -p > /dev/null; do
+    sleep 5
+  done
+
+  if xcode-select -p &> /dev/null; then
+    echo "Xcode is installed."
+  else
+    echo "Xcode installation failed, please install it manually."
+
+
+fi
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
