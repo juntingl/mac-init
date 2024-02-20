@@ -9,6 +9,11 @@ else
   xcode-select --install
 fi
 
+# wait for xcode installation to complete.
+while !xcode-select -p > /dev/null; do
+  sleep 5
+done
+
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s /bin/zsh
