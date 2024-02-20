@@ -76,3 +76,6 @@ echo 'save it to gitlab or https://github.com/settings/keys'
 
 # move vscode keybindings
 # cp -f keybindings.json ~/Library/Application\ Support/Code/User
+
+# config zsh
+bash ./config-iterm.sh
