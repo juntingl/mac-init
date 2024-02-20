@@ -1,8 +1,7 @@
 #! /bin/bash
 
 # check if xcode is installed
-if xcode-select -p &> /dev/null
-then
+if xcode-select -p &> /dev/null; then
   echo "Xcode is installed."
 else
   echo "Xcode is not installed."
