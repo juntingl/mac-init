@@ -1,5 +1,14 @@
 #! /bin/bash
 
+# check if xcode is installed
+if xcode-select -p &> /dev/null
+then
+  echo "Xcode is installed."
+else
+  echo "Xcode is not installed."
+  xcode-select --install
+fi
+
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s /bin/zsh
