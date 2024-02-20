@@ -62,6 +62,7 @@ mkdir -p ~/workspace/github
 
 # node version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.zshrc
 
 nvm install stable
 nvm alias default node
