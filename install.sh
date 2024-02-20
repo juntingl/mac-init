@@ -16,6 +16,7 @@ else
     echo "Xcode is installed."
   else
     echo "Xcode installation failed, please install it manually."
+    exit 1
   fi
 fi
 
