@@ -10,7 +10,7 @@ else
 fi
 
 # wait for xcode installation to complete.
-while !xcode-select -p > /dev/null; do
+while ! xcode-select -p > /dev/null; do
   sleep 5
 done
 
