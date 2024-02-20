@@ -17,8 +17,7 @@ else
     echo "Xcode is installed."
   else
     echo "Xcode installation failed, please install it manually."
-
-
+  fi
 fi
 
 # oh my zsh
