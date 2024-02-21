@@ -83,7 +83,7 @@ nvm alias default node
 npm install -g nrm
 
 # ssh-keygen
-if [ ! -e "~/.ssh/id_rsa.pub" ]; then
+if [ ! -e "$HOME/.ssh/id_rsa.pub" ]; then
   ssh-keygen
   sleep 5
   cat ~/.ssh/id_rsa.pub
