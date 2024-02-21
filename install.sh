@@ -101,6 +101,7 @@ curl https://raw.githubusercontent.com/ahmadawais/shades-of-purple-iterm2/master
 ITERM2_THEME="shades-of-purple"
 ### Find the line number where the ZSH_THEME variable is located.
 LINE_NUMBER=$(grep -n "^ZSH_THEME=" ~/.zshrc | cut -d: -f1)
+echo $LINE_NUMBER
 ### Replace the ZSH_THEME value in the row.
 sed -i "${LINE_NUMBER}s/ZSH_THEME=.*/ZSH_THEME=\"${ITERM2_THEME}\"/" ~/.zshrc
 
