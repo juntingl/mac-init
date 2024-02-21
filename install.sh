@@ -39,11 +39,11 @@ unset POSIXLY_CORRECT
 
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
-brew --verstion
 
 # brew upgrade
 echo "Homebrew is upgrading......"
 brew upgrade
+
 brew --version
 
 # brew install
