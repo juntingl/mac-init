@@ -27,15 +27,6 @@ chsh -s /bin/zsh
 # brew
 sh ./brew-isntall.sh
 
-# brew install
-brew install git
-brew install wget
-brew install ripgrep
-brew install autojump
-brew install tree
-brew install fig
-brew install --cask iterm2
-
 git config --global user.name  'Junting'
 git config --global user.email '342766475@qq.com'
 

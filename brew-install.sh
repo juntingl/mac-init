@@ -26,4 +26,16 @@ else
   echo "homebrew is installed."
 fi
 
-exit 1
+# brew upgrade
+echo "Homebrew is upgrading......"
+brew upgrade
+brew --version
+
+# brew install
+brew install git
+brew install wget
+brew install ripgrep
+brew install autojump
+brew install tree
+brew install fig
+brew install --cask iterm2
