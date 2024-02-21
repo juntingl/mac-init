@@ -21,16 +21,13 @@ else
 fi
 
 # oh my zsh
-if ! which zsh &> /dev/null; then
+if ! command -v zsh &> /dev/null; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   chsh -s /bin/zsh
 else
   echo "chsh -s /bin/zsh"
-  chsh -s /bin/zsh
 fi
-
 # brew
-
 echo "${POSIXLY_CORRECT}"
 echo "Installing Homebrew..."
 export NONINTERACTIVE=1
@@ -99,6 +96,7 @@ fi
 curl https://raw.githubusercontent.com/ahmadawais/shades-of-purple-iterm2/master/shades-of-purple.zsh-theme > ~/.oh-my-zsh/themes/shades-of-purple.zsh-theme
 
 ## change zsh theme
+chsh -s /bin/zsh
 ITERM2_THEME="shades-of-purple"
 ### Find the line number where the ZSH_THEME variable is located.
 LINE_NUMBER=$(grep -n "^ZSH_THEME=" ~/.zshrc | cut -d: -f1)
