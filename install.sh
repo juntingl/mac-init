@@ -27,6 +27,9 @@ if ! command -v zsh &> /dev/null; then
 else
   echo "chsh -s /bin/zsh"
 fi
+## config zsh - autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # brew
 echo "${POSIXLY_CORRECT}"
 echo "Installing Homebrew..."
