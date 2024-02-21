@@ -21,13 +21,16 @@ else
 fi
 
 # oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-source ~/.zshrc
-sleep 3
-chsh -s /bin/zsh
+if !which zsh &> /dev/null; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  source ~/.zshrc
+  sleep 3
+  chsh -s /bin/zsh
+  else
+    chsh -s /bin/zsh
+fi
 
 # brew
-
 
 echo "${POSIXLY_CORRECT}"
 echo "Installing Homebrew..."
