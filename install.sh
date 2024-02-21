@@ -21,7 +21,7 @@ else
 fi
 
 # oh my zsh
-if !which zsh &> /dev/null; then
+if ! which zsh &> /dev/null; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   source ~/.zshrc
   sleep 3
