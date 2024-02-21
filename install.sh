@@ -53,7 +53,7 @@ brew install ripgrep
 brew install autojump
 brew install tree
 brew install fig
-brew install --cask iterm2
+brew install iterm2
 
 git config --global user.name  'Junting'
 git config --global user.email '342766475@qq.com'
