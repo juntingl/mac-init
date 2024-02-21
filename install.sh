@@ -27,7 +27,7 @@ chsh -s /bin/zsh
 # brew
 if ! command -v brew &> /dev/null; then
   echo "Installing Homebrew..."
-  NONINTERACTIVE=1
+  export NONINTERACTIVE=1
   export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
   export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
   export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
