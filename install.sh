@@ -56,6 +56,7 @@ npm install -g nrm
 
 # ssh-keygen
 ssh-keygen
+sleep 5
 cat ~/.ssh/id_rsa.pub
 
 echo 'save it to gitlab or https://github.com/settings/keys'
