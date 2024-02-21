@@ -101,8 +101,7 @@ ITERM2_THEME="shades-of-purple"
 ### Find the line number where the ZSH_THEME variable is located.
 LINE_NUMBER=$(grep -n "^ZSH_THEME=" ~/.zshrc | cut -d: -f1)
 ### Replace the ZSH_THEME value in the row.
-echo "${LINE_NUMBER}s/ZSH_THEME=.*/ZSH_THEME=\"${ITERM2_THEME}\"/"
-sed -i "${LINE_NUMBER}s/ZSH_THEME=.*/ZSH_THEME=\"${ITERM2_THEME}\"/" ~/.zshrc
+sed -i "" "${LINE_NUMBER}s/ZSH_THEME=.*/ZSH_THEME=\"${ITERM2_THEME}\"/" ~/.zshrc
 
 source ~/.zshrc
 echo "The theme has been changed to ${ITERM2_THEME}"
