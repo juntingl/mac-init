@@ -83,14 +83,29 @@ nvm alias default node
 npm install -g nrm
 
 # ssh-keygen
-ssh-keygen
-sleep 5
-cat ~/.ssh/id_rsa.pub
+if ![ -e "~/.ssh/id_rsa.pub" ]; then
+  ssh-keygen
+  sleep 5
+  cat ~/.ssh/id_rsa.pub
 
-echo 'save it to gitlab or https://github.com/settings/keys'
-
+  echo 'save it to gitlab or https://github.com/settings/keys'
+fi
 # move vscode keybindings
 # cp -f keybindings.json ~/Library/Application\ Support/Code/User
 
 # config zsh
-sh ./config-iterm.sh
+## download zsh theme
+curl https://raw.githubusercontent.com/ahmadawais/shades-of-purple-iterm2/master/shades-of-purple.zsh-theme > ~/.oh-my-zsh/themes/shades-of-purple.zsh-theme
+
+## change zsh theme
+ITERM2_THEME="shades-of-purple"
+### Find the line number where the ZSH_THEME variable is located.
+LINE_NUMBER=$(grep -n "^ZSH_THEME=" ~/.zshrc | cut -d: -f1)
+### Replace the ZSH_THEME value in the row.
+sed -i "${LINE_NUMBER}s/ZSH_THEME=.*/ZSH_THEME=\"${ITERM2_THEME}\"/" ~/.zshrc
+
+source ~/.zshrc
+echo "The theme has been changed to ${ITERM2_THEME}"
+
+# download shades-of-purple.itermcolors
+curl https://raw.githubusercontent.com/ahmadawais/shades-of-purple-iterm2/master/shades-of-purple.itermcolors > ~/Desktop/shades-of-purple.itermcolors
